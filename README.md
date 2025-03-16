@@ -2,7 +2,7 @@
 
 An IoT-based dashboard for monitoring and controlling agricultural systems in real-time. This project provides farmers with data visualization, irrigation controls, and environmental monitoring capabilities.
 
-![Demo](./public\Smart_farming_dashboard.gif)
+![Demo](https://github.com/PeradheepY/Smart_Farming_Dashboard/blob/main/public/Smart_farming_dashboard.gif)
 
 
 ## Features
