@@ -1,0 +1,140 @@
+@import "leaflet/dist/leaflet.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background: 0 0% 9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 11%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 11%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 142 60% 54%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 16%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 16%;
+    --ring: 142 60% 54%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "ss01", "ss02";
+  }
+}
+
+@layer utilities {
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .card-shadow {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gauge-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .gauge-dial {
+    stroke-dashoffset: 0;
+    transition: stroke-dasharray 1.5s ease-out;
+  }
+  
+  .gauge-background {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.1);
+    stroke-width: 12;
+    stroke-linecap: round;
+  }
+  
+  .gauge-progress {
+    fill: none;
+    stroke: #45d058;
+    stroke-width: 12;
+    stroke-linecap: round;
+  }
+  
+  .toggle-switch {
+    @apply relative inline-flex h-8 w-14 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out;
+  }
+  
+  .toggle-switch-on {
+    @apply bg-fieldgreen;
+  }
+  
+  .toggle-switch-off {
+    @apply bg-gray-700;
+  }
+  
+  .toggle-switch-button {
+    @apply pointer-events-none inline-block h-7 w-7 transform rounded-full bg-white shadow-lg ring-0 transition duration-200 ease-in-out;
+  }
+  
+  .toggle-switch-on .toggle-switch-button {
+    @apply translate-x-6;
+  }
+  
+  .toggle-switch-off .toggle-switch-button {
+    @apply translate-x-0;
+  }
+}
+
+@layer components {
+  .toggle-button {
+    @apply transform transition-transform duration-300 ease-in-out;
+  }
+  
+  .toggle-switch {
+    @apply relative inline-flex items-center rounded-full transition-colors duration-300;
+  }
+  
+  .toggle-switch[aria-pressed="true"] .toggle-button {
+    @apply translate-x-full;
+  }
+  
+  .toggle-switch[aria-pressed="false"] .toggle-button {
+    @apply translate-x-0;
+  }
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
