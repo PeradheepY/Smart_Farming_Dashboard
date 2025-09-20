@@ -53,7 +53,7 @@ echo "🔧 Checking Configuration Files:"
 
 # Check for configuration files
 run_test "Environment template exists" "[ -f '.env.example' ]"
-run_test "Backend environment template exists" "[ -f 'Backend/api/.env.example' ]"
+run_test "Backend environment template exists" "[ -f Backend/api/.env.example ]"
 run_test "Docker configuration exists" "[ -f 'Dockerfile' ]"
 run_test "Docker Compose configuration exists" "[ -f 'docker-compose.yml' ]"
 run_test "Deployment documentation exists" "[ -f 'DEPLOYMENT.md' ]"
