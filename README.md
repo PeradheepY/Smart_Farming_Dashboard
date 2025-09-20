@@ -56,3 +56,46 @@ An IoT-based dashboard for monitoring and controlling agricultural systems in re
    ```sh
    npm run dev
    ```
+
+## Quick Setup
+
+For a faster setup process, you can use the provided setup script:
+
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+This script will automatically install dependencies and create environment file templates.
+
+## 🚀 Deployment
+
+This project can be deployed to various platforms. For detailed deployment instructions, see **[DEPLOYMENT.md](./DEPLOYMENT.md)**.
+
+### Quick Deployment Options:
+
+- **Frontend**: Vercel, Netlify, GitHub Pages
+- **Backend**: Railway, Render, Heroku
+- **Full Stack**: Docker + any cloud platform
+
+### Environment Setup Required:
+
+1. **Firebase Project**: Create a Firebase project with Realtime Database
+2. **Environment Variables**: Configure both frontend and backend environment variables
+3. **Service Account**: Download Firebase service account JSON for backend
+
+For step-by-step deployment guides, see the [DEPLOYMENT.md](./DEPLOYMENT.md) file.
+
+## 📁 Project Structure
+
+```
+Smart_Farming_Dashboard/
+├── src/                    # Frontend React application
+├── Backend/api/           # Python Flask backend
+├── public/                # Static assets
+├── .github/workflows/     # CI/CD pipelines
+├── Dockerfile*            # Docker configurations
+├── docker-compose*.yml    # Docker Compose setups
+├── .env.example          # Environment variable template
+└── DEPLOYMENT.md         # Detailed deployment guide
+```

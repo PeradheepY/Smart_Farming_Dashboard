@@ -103,6 +103,15 @@ def get_historical_data():
     
     return jsonify(data)
 
+@app.route('/health', methods=['GET'])
+def health_check():
+    """Health check endpoint for deployment monitoring"""
+    return jsonify({
+        'status': 'healthy',
+        'timestamp': datetime.now().isoformat(),
+        'service': 'Smart Farming Dashboard API'
+    }), 200
+
 if __name__ == '__main__':
     # Use environment variable for port or default to 5000
     port = int(os.environ.get('PORT', 5000))
